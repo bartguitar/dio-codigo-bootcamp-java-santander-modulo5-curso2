@@ -12,6 +12,7 @@
 - Java 25
 - Gradle
 - Spring Data JPA (Postgres)/Mongodb/Redis
+- Docker Compose
 
 ### Seção 1 - Introdução ao Conectando sua API
 
@@ -59,4 +60,15 @@ ARQUITETURA - DDD
 2.3 - Criação da classe interface "CustomerRepository"
 2.4 - Criação pacote "persistence" e dentro dele "entity, repository"
 2.5 - Criação classe "JpaCustomerRepository"
+2.6 - Criação do banco de dados usando Docker, criação do arquivo "compose.yml"
+2.7 - Baixar a biblioteca/dependencia no build.gradle do docker para spring "developmentOnly....... 'spring-boot-docker-compose'"
+2.8 - Adicionar mais 2 dependências - "Spring data JPA/mysql-connector-j"
+2.9 - Testar se conectou com o banco de dados através do docker depois da criação do arquivo compose.yml e adição das dependências.
+2.10 - Adicionar mais 2 dependencias - spring-boot-web/spring-boot-starter-actuator
+2.11 - Testar subindo a aplicação com essas 2 dependencias já baixadas. Testar o endereço: http://localhost:8080/actuator/health
+2.11 - Acrescentar 2 configurações no application.properties - "management/spring.docker"
+2.12 - Testar aplicação novamente no endereço acima e confirmar se está tudo conectado ao banco de dados
+2.13 - Adicionar mais 2 linhas de configuração no properties - "spring.jpa.hibernate/spring.jpa.show"
+2.14 - Adicionar o plugin do "lombok"
+
 
