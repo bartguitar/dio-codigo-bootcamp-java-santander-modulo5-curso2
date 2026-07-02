@@ -77,5 +77,12 @@ ARQUITETURA - DDD
 2.18 - Fazer anotações em "Customer/pacote entity" @NotBlank e @Column e demais anotações da classe
 2.19 - Subir a aplicação e ver se foi criado a estrutura do banco
 --Feito commit--
+2.20 - Criar a interface "CustomerEntityRepository"
+2.21 - injeção de dependencia no "JpaCustomerRepository" dentre outros codigos/metodos da classe
+2.22 - Marcar anotação do lombok "@Getter" no "Customer pacote Domain"
+2.23 - Implementação de vários codigos em "JpaCustomerRepository"
+2.24 - Exclusão dos arquivos .gitkeep para limpeza das pastas
+--Feito commit--
+
 
 

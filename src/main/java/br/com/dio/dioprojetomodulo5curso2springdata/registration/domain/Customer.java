@@ -1,7 +1,9 @@
 package br.com.dio.dioprojetomodulo5curso2springdata.registration.domain;
 
+import lombok.Getter;
 import org.springframework.util.Assert;
 
+@Getter
 public class Customer {
 
     private CustomerId id;
