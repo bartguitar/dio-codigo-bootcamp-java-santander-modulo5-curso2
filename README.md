@@ -70,5 +70,12 @@ ARQUITETURA - DDD
 2.12 - Testar aplicação novamente no endereço acima e confirmar se está tudo conectado ao banco de dados
 2.13 - Adicionar mais 2 linhas de configuração no properties - "spring.jpa.hibernate/spring.jpa.show"
 2.14 - Adicionar o plugin do "lombok"
+--Feito commit--
+2.15 - Criar classe "Customer" dentro de entity e fazer anotações da classe, "@Entity/@Data/@RequiredArgsConstructor"
+2.16 - Terminar de fazer a classe "Customer" do pacote entity
+2.17 - Adicionar dependência "spring-boot-validation"
+2.18 - Fazer anotações em "Customer/pacote entity" @NotBlank e @Column e demais anotações da classe
+2.19 - Subir a aplicação e ver se foi criado a estrutura do banco
+--Feito commit--
 
 
