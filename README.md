@@ -82,15 +82,26 @@ ARQUITETURA - DDD
 2.22 - Marcar anotação do lombok "@Getter" no "Customer pacote Domain" \
 2.23 - Implementação de vários codigos em "JpaCustomerRepository" \
 2.24 - Exclusão dos arquivos .gitkeep para limpeza das pastas \
---Feito commit--
+--Feito commit-- \
 ### Seção 3 - Criando API REST para Customers
 3 - Adicionar dependência "spring-data-rest" \
 3.1 - Adicionar anotação dentro de "CustomerEntityRepository" \
 3.2 - Mais uma extensão da interface "CustomerEntityRepository" chamada "PagingAndSorting....." \
 3.3 - Adicionar dependencia "hal-explorer" \
-3.4 - Criar metodo "public void prePersist" em "entity/customer"
-3.5 - Alteração no "application.properties" - ao inves de "create", colocar "update"
---Feito commit--
+3.4 - Criar metodo "public void prePersist" em "entity/customer" \
+3.5 - Alteração no "application.properties" - ao inves de "create", colocar "update" \
+--Feito commit-- \
+3.6 - Alterar a classe "CustomerEntityRepository" para não expor o delete ("void delete by id") e criar uma lista de consulta \
+3.7 - Fazer integração com endereço criando a classe "entity/Address" \
+3.8 - Voltar classe "entity/customer" e fazer mapeamento e relacionamentos com de classe endereço \
+3.9 - Criar pacote "entity/projection" e criar interface "CustomerExcerpt" dentro desse pacote \
+3.10 - Alterar "CustomerEntityRepository" com "excerptProjection" como parametro \
+3.11 - Criar pacote "infrastructure/event" e criar classe "CustomerEventHandler" \
+--Feito commit-- \
+
+
+
+
 
 
 
