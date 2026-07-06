@@ -98,6 +98,20 @@ ARQUITETURA - DDD
 3.10 - Alterar "CustomerEntityRepository" com "excerptProjection" como parametro \
 3.11 - Criar pacote "infrastructure/event" e criar classe "CustomerEventHandler" \
 --Feito commit-- \
+### Seção 4 - Flexibilidade com NoSQL
+3.12 - Começar um novo componente, criar pacote "catalog" \
+3.13 - Inserir "catalog-database" no arquivo "compose.yml" \
+3.14 - Inserir "catalog-data" no "compose.yml" \
+3.15 - Inserir em "application.properties" várias propriedades - # Registration (MySQL 3307) e # Catalog (MySQL 3308) \
+3.16 - Excluir dentro de "properties" linhas - "spring.jpa.hibernate.ddl-auto=update/spring.jpa.show-sql=true" \
+3.17 - Criar classe "RegistrationConfiguration" \
+3.18 - Criar classe "CatalogConfiguration" \
+3.19 - Criar dentro de "catalog", pacotes "application/domain/infrastructure" \
+3.20 - Criar dentro de "catalog/infrastruture" pacotes "persistence" e dentro dele "entity/repository" \
+3.21 - Criar dentro de "catalog/infrastructure/entity" classe "Event" \
+3.22 - Criar pasta "event" dentro de "catalog/infrastruture" e criar classe "EventListener" \
+3.23 - Criar dentro de "catalog/infrastructure/persistence/repository" criar interface "EventEntityRepository" \
+--Feito commit-- \
 
 
 
