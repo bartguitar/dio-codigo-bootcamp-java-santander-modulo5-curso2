@@ -120,5 +120,19 @@ ARQUITETURA - DDD
 5.5 - Criar dentro de "catalog/infra/persis/entity" classe "EventMetadata" \
 5.6 - Adicionar config dentro de "application.properties" o mongodb 'spring.mongodb.representation' \
 5.7 - Criar interface "EventMetadataEntityRepository" dentro de "catalog/repository" \ 
-5.8 - Criar classe "EventMetadataEventListener" dentro de "catalog/infra/event"
+5.8 - Criar classe "EventMetadataEventListener" dentro de "catalog/infra/event" \
 --Feito commit--
+### Seção 6 - Criando Endpoints Customizados
+6.1 - Criar classe "Event" em "catalog/domain" \
+6.2 - Criar record "EventId" \
+6.3 - Criar record "EventMetadata" \
+6.4 - Criar record "SectorId" \
+6.5 - Criar classe "Sector" \
+6.6 - Criar record "SeatId" \
+6.7 - Criar classe "Seat" \
+6.8 - Criar interface "EventRepository" \
+6.9 - Criar interface "EventMetadataRepository" \
+--Feito commit--
+
+
+
