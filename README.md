@@ -82,7 +82,7 @@ ARQUITETURA - DDD
 2.22 - Marcar anotação do lombok "@Getter" no "Customer pacote Domain" \
 2.23 - Implementação de vários codigos em "JpaCustomerRepository" \
 2.24 - Exclusão dos arquivos .gitkeep para limpeza das pastas \
---Feito commit-- \
+--Feito commit-- 
 ### Seção 3 - Criando API REST para Customers
 3 - Adicionar dependência "spring-data-rest" \
 3.1 - Adicionar anotação dentro de "CustomerEntityRepository" \
@@ -97,25 +97,28 @@ ARQUITETURA - DDD
 3.9 - Criar pacote "entity/projection" e criar interface "CustomerExcerpt" dentro desse pacote \
 3.10 - Alterar "CustomerEntityRepository" com "excerptProjection" como parametro \
 3.11 - Criar pacote "infrastructure/event" e criar classe "CustomerEventHandler" \
---Feito commit-- \
+--Feito commit-- 
 ### Seção 4 - Flexibilidade com NoSQL
-3.12 - Começar um novo componente, criar pacote "catalog" \
-3.13 - Inserir "catalog-database" no arquivo "compose.yml" \
-3.14 - Inserir "catalog-data" no "compose.yml" \
-3.15 - Inserir em "application.properties" várias propriedades - # Registration (MySQL 3307) e # Catalog (MySQL 3308) \
-3.16 - Excluir dentro de "properties" linhas - "spring.jpa.hibernate.ddl-auto=update/spring.jpa.show-sql=true" \
-3.17 - Criar classe "RegistrationConfiguration" \
-3.18 - Criar classe "CatalogConfiguration" \
-3.19 - Criar dentro de "catalog", pacotes "application/domain/infrastructure" \
-3.20 - Criar dentro de "catalog/infrastruture" pacotes "persistence" e dentro dele "entity/repository" \
-3.21 - Criar dentro de "catalog/infrastructure/entity" classe "Event" \
-3.22 - Criar pasta "event" dentro de "catalog/infrastruture" e criar classe "EventListener" \
-3.23 - Criar dentro de "catalog/infrastructure/persistence/repository" criar interface "EventEntityRepository" \
---Feito commit-- \
-
-
-
-
-
-
-
+4.1 - Começar um novo componente, criar pacote "catalog" \
+4.2 - Inserir "catalog-database" no arquivo "compose.yml" \
+4.3 - Inserir "catalog-data" no "compose.yml" \
+4.4 - Inserir em "application.properties" várias propriedades - # Registration (MySQL 3307) e # Catalog (MySQL 3308) \
+4.5 - Excluir dentro de "properties" linhas - "spring.jpa.hibernate.ddl-auto=update/spring.jpa.show-sql=true" \
+4.6 - Criar classe "RegistrationConfiguration" \
+4.7 - Criar classe "CatalogConfiguration" \
+4.8 - Criar dentro de "catalog", pacotes "application/domain/infrastructure" \
+4.9 - Criar dentro de "catalog/infrastruture" pacotes "persistence" e dentro dele "entity/repository" \
+4.10 - Criar dentro de "catalog/infrastructure/entity" classe "Event" \
+4.11 - Criar pasta "event" dentro de "catalog/infrastruture" e criar classe "EventListener" \
+4.12 - Criar dentro de "catalog/infrastructure/persistence/repository" criar interface "EventEntityRepository" \
+--Feito commit-- 
+### Seção 5 - Multi-Database com Docker
+5.1 - Criar banco de dados mongo-db "catalog-metadata-database" no arquivo "compose-yml" \
+5.2 - Testar se subiu o banco do mongo-db criado \
+5.3 - Adicionar nova dependência "spring-data-mongodb" em "build.gradle" \
+5.4 - Adicionar as configurações do mongo-db dentro da classe "CatalogConfiguration" colocando as anotações \
+5.5 - Criar dentro de "catalog/infra/persis/entity" classe "EventMetadata" \
+5.6 - Adicionar config dentro de "application.properties" o mongodb 'spring.mongodb.representation' \
+5.7 - Criar interface "EventMetadataEntityRepository" dentro de "catalog/repository" \ 
+5.8 - Criar classe "EventMetadataEventListener" dentro de "catalog/infra/event"
+--Feito commit--
