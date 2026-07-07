@@ -132,7 +132,11 @@ ARQUITETURA - DDD
 6.7 - Criar classe "Seat" \
 6.8 - Criar interface "EventRepository" \
 6.9 - Criar interface "EventMetadataRepository" \
---Feito commit--
+--Feito commit-- \
+6.10 - Criar classe "JpaEventRepository" dentro de "catalog/infra/persist../repository" \
+6.11 - Criar classe "MongoEventMetadataRepository" \
+--Feito commit-- \
+
 
 
 
