@@ -171,5 +171,39 @@ da classe "catalog/domain/Event" \
 8.10 - Criar classe "TicketingEventListener" dentro de "event" \
 8.11 - Testar aplicação \
 --Feito commit--
-
-
+### Seção 9 - Implementando Persistência com Postgres
+9.1 - Criar o banco "ticketing-database" postgres em "compose.yml" \
+9.2 - Testar se subiu o banco criado "ticketing-database" \
+9.3 - Adicionar dependência do postgres "org.postgres...." em "build.gradle" \
+9.4 - Adicionar config "ticketing (postgres 5433)" em "application.properties" \
+9.5 - Criar classe "TicketingConfiguration" \
+9.6 - Criar "CustomerId" dentro de "ticketing/domain" \
+9.7 - Dentro de "ticketing/domain" classe "Customer" \
+9.8 - Dentro de "ticketing/domain" classe interface "CustomerRepository" \
+9.9 - Criar dentro de "ticketing/application" classe "CreateCustomerUseCase" \
+9.10 - Alterar classe "TicketingEventListener" \
+9.11 - Criar pacote "persistence" dentro de "ticketing/infra" \
+9.12 - Criar pacote "entity" e "repository" \
+9.13 - Criar classe "Customer" \
+9.14 - Criar classe interface "CustomerCrudRepository" \
+9.15 - Criar classe "PostgresCustomerRepository" \
+9.16 - Testar aplicação \
+9.17 - Alterar classe interface "CustomerCrudRepository" parametro "path = "_customer" \
+9.18 - Fazer POST em "customers" para testar entrada de dados na api em http://localhost:8080/explorer/index.html#uri=/ \
+9.19 - Criar classe "Event" dentro de "ticketing/domain" \
+9.20 - Criar classe "EventId" \
+9.21 - Criar classe "SectorId" \
+9.22 - Criar classe "Sector" \
+9.23 - Criar classe "SeatId" \
+9.24 - Criar classe "Seat" \
+9.25 - Criar classe interface "EventRepository" \
+9.26 - Criar classe "CreateEventUseCase" dentro de "/ticketing/application" \
+9.27 - Alterar classe "TicketingEventListener" injetar "CreateEventUseCase" \
+9.28 - Criar classe "Event" dentro de "ticketing/entity" \
+9.29 - Criar classe "Sector" dentro de "ticketing/entity" \
+9.30 - Criar classe "Seat" dentro de "ticketing/entity" \
+9.31 - Criar classe interface "EventCrudRepository" \
+9.32 - Criar classe "PostgresEventRepository" \
+9.33 - Testar aplicacao api http://localhost:8080/explorer/index.html#uri=/ \
+9.34 - Confirmar se todas as tabelas atualizadas foram para o postgres
+--Feito commit--
