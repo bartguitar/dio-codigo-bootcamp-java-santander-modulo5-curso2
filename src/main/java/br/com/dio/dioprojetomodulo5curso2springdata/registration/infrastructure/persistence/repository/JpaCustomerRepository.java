@@ -1,8 +1,10 @@
 package br.com.dio.dioprojetomodulo5curso2springdata.registration.infrastructure.persistence.repository;
 
+import br.com.dio.dioprojetomodulo5curso2springdata.common.infrastructure.event.dto.CustomerCreated;
 import br.com.dio.dioprojetomodulo5curso2springdata.registration.domain.Customer;
 import br.com.dio.dioprojetomodulo5curso2springdata.registration.domain.CustomerId;
 import br.com.dio.dioprojetomodulo5curso2springdata.registration.domain.CustomerRepository;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,9 +15,13 @@ import java.util.stream.StreamSupport;
 public class JpaCustomerRepository implements CustomerRepository {
 
     private final CustomerEntityRepository customerEntityRepository;
+    private final ApplicationEventPublisher publisher;
 
-    public JpaCustomerRepository(CustomerEntityRepository customerEntityRepository) {
+
+    public JpaCustomerRepository(CustomerEntityRepository customerEntityRepository,
+                                 ApplicationEventPublisher publisher) {
         this.customerEntityRepository = customerEntityRepository;
+        this.publisher = publisher;
     }
 
 
@@ -23,6 +29,9 @@ public class JpaCustomerRepository implements CustomerRepository {
     public Customer save(Customer customer) {
         var entity = mapper(customer);
         customerEntityRepository.save(entity);
+
+        publisher.publishEvent(new CustomerCreated(customer.getId().id().toString(), customer.getName()));
+
         return customer;
     }
 

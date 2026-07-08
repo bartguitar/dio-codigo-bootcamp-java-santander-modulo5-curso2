@@ -158,5 +158,18 @@ da classe "catalog/domain/Event" \
 7.6 - Alterar classe "EventOutput" colocar "implements Serializable" \
 7.7 - Testar aplicação, se der erro de "CacheManager", adicioná-lo manualmente em "CatalogConfiguration" método "redisCacheManager" \
 --Feito commit--
+### Seção 8 - Comunicação entre Microsserviços
+8.1 - Criar novo componente/pacote "ticketing" \
+8.2 - Criar novo pacote "common/infrastructure/event/dto" \
+8.3 - Criar classe record "CustomerCreated" \
+8.4 - Alterar classe "CustomerEventHandler" \
+8.5 - Alterar classe "JpaCustomerRepository" \
+8.6 - Criar classe record "EventUpdated" \
+8.7 - Alterar classe "EventMetadataEventListener" \
+8.8 - Dentro de "ticketing" criar 3 pacotes "application, domain, infrastructure" \
+8.9 - Dentro de "infra" criar pacote "event" \
+8.10 - Criar classe "TicketingEventListener" dentro de "event" \
+8.11 - Testar aplicação \
+--Feito commit--
 
 
