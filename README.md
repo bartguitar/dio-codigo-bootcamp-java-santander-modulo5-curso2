@@ -13,6 +13,7 @@
 - Gradle
 - Spring Data JPA (Postgres)/Mongodb/Redis
 - Docker Compose
+- Teste de API - http://localhost:8080/explorer/index.html#uri=/
 
 ### Seção 1 - Introdução ao Conectando sua API
 
@@ -87,7 +88,7 @@ ARQUITETURA - DDD
 3 - Adicionar dependência "spring-data-rest" \
 3.1 - Adicionar anotação dentro de "CustomerEntityRepository" \
 3.2 - Mais uma extensão da interface "CustomerEntityRepository" chamada "PagingAndSorting....." \
-3.3 - Adicionar dependencia "hal-explorer" \
+3.3 - Adicionar dependencia "hal-explorer" - Teste endereço: http://localhost:8080/explorer/index.html#uri=/ \
 3.4 - Criar metodo "public void prePersist" em "entity/customer" \
 3.5 - Alteração no "application.properties" - ao inves de "create", colocar "update" \
 --Feito commit-- \
@@ -136,7 +137,7 @@ ARQUITETURA - DDD
 6.10 - Criar classe "JpaEventRepository" dentro de "catalog/infra/persist../repository" \
 6.11 - Criar classe "MongoEventMetadataRepository" \
 --Feito commit-- \
-6.12 - Criar classe "BrowserShowcaseUseCase" em "catalog/application" \
+6.12 - Criar classe "BrowseShowcaseUseCase" em "catalog/application" \
 6.13 - Excluir o import "import br.com.dio.dioprojetomodulo5curso2springdata.catalog.infrastructure.persistence.entity.EventMetadata;"
 da classe "catalog/domain/Event" \
 6.14 - Criar pacote "http" em "catalog/infra" \
@@ -148,4 +149,14 @@ da classe "catalog/domain/Event" \
 6.20 - Alterar classe "ShowcaseUseCase" colocar lista de "<EventOutput>" \
 6.21 - Alterar "catalog.jpa.properties.hibernate.hbm2ddl.auto=create" para "update" \
 --Feito commit--
+### Seção 7 - Implementando Redis com Spring Data
+7.1 - Criar em "compose.yml" o banco "catalog-cache" \
+7.2 - Adicionar duas dependências "spring-boot-redis" e "redis.clients" \
+7.3 - Adicionar em "application.properties" a config "spring.data.redis..." \
+7.4 - Colocar a anotação "EnableCaching" na classe main \
+7.5 - Alterar classe "BrowseShowcaseUseCase" fazer anotação de "@cacheable" \
+7.6 - Alterar classe "EventOutput" colocar "implements Serializable" \
+7.7 - Testar aplicação, se der erro de "CacheManager", adicioná-lo manualmente em "CatalogConfiguration" método "redisCacheManager" \
+--Feito commit--
+
 

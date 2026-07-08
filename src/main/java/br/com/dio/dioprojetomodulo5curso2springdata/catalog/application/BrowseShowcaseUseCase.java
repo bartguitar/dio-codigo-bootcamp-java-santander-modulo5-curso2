@@ -11,13 +11,13 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Service
-public class BrowserShowcaseUseCase {
-    private static final Logger logger = LoggerFactory.getLogger(BrowserShowcaseUseCase.class);
+public class BrowseShowcaseUseCase {
+    private static final Logger logger = LoggerFactory.getLogger(BrowseShowcaseUseCase.class);
 
     private final EventRepository eventRepository;
     private final EventEnricher eventEnricher;
 
-    public BrowserShowcaseUseCase(EventRepository eventRepository, EventEnricher eventEnricher) {
+    public BrowseShowcaseUseCase(EventRepository eventRepository, EventEnricher eventEnricher) {
         this.eventRepository = eventRepository;
         this.eventEnricher = eventEnricher;
     }
