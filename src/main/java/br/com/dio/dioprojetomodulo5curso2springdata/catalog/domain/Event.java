@@ -1,6 +1,5 @@
 package br.com.dio.dioprojetomodulo5curso2springdata.catalog.domain;
 
-import br.com.dio.dioprojetomodulo5curso2springdata.catalog.infrastructure.persistence.entity.EventMetadata;
 import lombok.Getter;
 import lombok.Setter;
 

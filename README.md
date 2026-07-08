@@ -136,7 +136,16 @@ ARQUITETURA - DDD
 6.10 - Criar classe "JpaEventRepository" dentro de "catalog/infra/persist../repository" \
 6.11 - Criar classe "MongoEventMetadataRepository" \
 --Feito commit-- \
-
-
-
+6.12 - Criar classe "BrowserShowcaseUseCase" em "catalog/application" \
+6.13 - Excluir o import "import br.com.dio.dioprojetomodulo5curso2springdata.catalog.infrastructure.persistence.entity.EventMetadata;"
+da classe "catalog/domain/Event" \
+6.14 - Criar pacote "http" em "catalog/infra" \
+6.15 - Criar classe "ShowcaseController" em "http" \
+6.16 - Entrar com nova funcionalidade do java 21 "Virtual Threads" adicionando em "properties" a config "spring.threads" \
+6.17 - Colocar a anotação "EnableAsync" na classe main do projeto \
+6.18 - Criar a classe "EventEnricher" e alterar classe "BrowserShowcaseUseCase" \
+6.19 - Criar pacote "dto" em "catalog/application" e dentro criar a classe record "EventOutput" \
+6.20 - Alterar classe "ShowcaseUseCase" colocar lista de "<EventOutput>" \
+6.21 - Alterar "catalog.jpa.properties.hibernate.hbm2ddl.auto=create" para "update" \
+--Feito commit--
 
