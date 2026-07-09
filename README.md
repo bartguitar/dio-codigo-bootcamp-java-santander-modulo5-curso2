@@ -205,5 +205,25 @@ da classe "catalog/domain/Event" \
 9.31 - Criar classe interface "EventCrudRepository" \
 9.32 - Criar classe "PostgresEventRepository" \
 9.33 - Testar aplicacao api http://localhost:8080/explorer/index.html#uri=/ \
-9.34 - Confirmar se todas as tabelas atualizadas foram para o postgres
+9.34 - Confirmar se todas as tabelas atualizadas foram para o postgres \
 --Feito commit--
+### Seção 10 - Evitando Overbooking (Criando regra de negócio nova)
+10.1 - Subir mais uma instância do REDIS no "compose.yml" chamada "ticketing-locking" \
+10.2 - Adicionar config em properties "catalog.redis.host"/"catalog.redis.port" e "ticketing.redis.host"/"ticketing.redis.port \
+10.3 - Adicionar em "CatalogConfiguration" método "catalogRedisConnectionFactory" \
+10.4 - Adicionar 2 métodos "RedisConnection" em "TicketingConfiguration" \
+10.5 - Testar Aplicação \
+10.6 - Criar classe "SeatLock" \
+10.7 - Criar classe interface "RedisSeatLockRepository" \
+10.8 - Alterar classe "EventRepository" adicionar metodos "existsSeat" e "tryLockSeat" \
+10.9 - Alterar nome da classe "PostgresEventRepository" para "WorkOfUnitEventRepository" \
+10.10 - Implementar na classe "WorkOfUnitEventRepository" os 2 metodos criados anteriormente no item 10.8 e injetar variavel "redisSeatLockRepository" \
+10.11 - Criar metodo "existsByCorrelationIdAndSectors_Seats_CorrelationId" em "EventCrudRepository" \
+10.12 - Criar classe "SelectSeatUseCase" \
+10.13 - Criar classe exception "SeatNotFoundException" \
+10.14 - Criar classe exception "SeatAlreadyReservedException" \
+10.15 - Criar pasta "http" e "SeatSelectionController" \
+10.16 - Criar pasta "request" dentro de "http" e criar classe "SeatSelectionRequest" \
+10.17 - Subir e Testar aplicação (criar no Hall Explorer), criar tudo do zero seguindo os passos do topico seguinte \
+10.18 - Criar - Usuário > Criar um evento > Criar evento de atualização
+--Feito Commit--
